@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Fisabrantes   <img src="~/Imagens/logotipo.jpg" width="672" height="170" alt="" /></h1>
+    <h4 class="lead"></h4>
+    <p style="text-align:justify;">
+        <font size="3">
+            Centra-se na análise e avaliação do movimento e da postura, baseadas na estrutura e função do corpo, utilizando modalidades educativas e
+            terapêuticas específicas, com base, essencialmente, no movimento, nas terapias manipulativas e em meios físicos e naturais, com a finalidade
+            de promoção da saúde e prevenção da doença, da deficiência, da incapacidade e da inadaptação e de tratar, habilitar ou reabilitar, indivíduos
+            com disfunções de natureza física, mental, de desenvolvimento ou outras, incluindo a dor, com o objetivo de os ajudar a atingir a máxima
+            funcionalidade e qualidade de vida.
+        </font>
+    </p>
+    <p style="text-align:right;"><font size="3">Definição de Fisioterapia retirado do decreto-lei nº 564/99 de 21 de Dezembro.</font></p>
+    <div>
+        <font size="3">
+            <p><b>Horário de atendimento:</b></p>
+            <p>
+                2ª a 6ª feira: 08:00 - 20:00 horas<br />
+                Sábado: 08:00 - 13:00 horas<br />
+                Domingo: Encerrado
+            </p>
+        </font>
+    </div>
+    <p style="text-align:right;">
+        <b>
+            <font size="3">Colaboradores:</font>
+            @Html.ActionLink("Médicos »", "ListaMedicos", "Home", null, new { @class = "btn btn-default" })
+            @Html.ActionLink("Terapeutas »", "ListaTerapeutas", "Home", null, new { @class = "btn btn-default" })
+            @Html.ActionLink("Administrativos »", "ListaAdministrativos", "Home", null, new { @class = "btn btn-default" })
+        </b>
+    </p>
+</div>
