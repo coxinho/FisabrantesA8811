@@ -11,7 +11,7 @@ namespace Fisabrantes.Controllers
 {
         // referencia a BD
         ApplicationDbContext db = new ApplicationDbContext();
-        private object listaAdministrativos;
+        private object listaFuncionarios;
 
         public ActionResult Index()
         {
@@ -75,6 +75,16 @@ namespace Fisabrantes.Controllers
                                     .ToList();
 
             return View(listaDeAdministrativos);
+        }
+        public ActionResult ListaFuncionarios()
+        {
+            // pesquisar a lista de administrativos que exixtem na BD
+            var listaDeFuncionarios = db.Funcionarios
+                                    .Where(f => f.CatProfissional.Contains("Funcion"))
+                                    .OrderBy(f => f.Nome)
+                                    .ToList();
+
+            return View(listaDeFuncionarios);
         }
     }
 }

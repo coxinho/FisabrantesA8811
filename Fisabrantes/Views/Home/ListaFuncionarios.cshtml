@@ -1,0 +1,30 @@
+﻿@model ICollection<Fisabrantes.Models.Funcionarios>
+
+@{
+    ViewBag.Title = "ListaFuncionarios";
+}
+
+<h2>Lista de Funcionários</h2>
+
+<div class="form-horizontal">
+
+    @foreach (var funcionario in Model)
+    {
+        <div class="form-group">
+            @Html.LabelFor(model => funcionario.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => funcionario.Nome, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => funcionario.DataEntClinica, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => funcionario.DataEntClinica, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <hr />
+    }
+
+</div>
