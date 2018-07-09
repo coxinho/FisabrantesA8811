@@ -22,6 +22,7 @@ namespace Fisabrantes.Models
         public string Nome { get; set; }
 
         [Display(Name = "Data do Nascimento")]
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
         public DateTime DataNasc { get; set; }
 
         [Display(Name = "Rua")]
@@ -40,10 +41,19 @@ namespace Fisabrantes.Models
         public string NIF { get; set; }
 
         [Display(Name = "Data de Entrada na Clínica")]
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
         public DateTime DataEntClinica { get; set; }
+
+        [Display(Name = "Contratado")]
+        public string Empregado { get; set; }
 
         [Display(Name = "Nº Carteira Profissional")]
         public string CatProfissional { get; set; }
+
+        //********************************************************************************     
+        // atributo para relacionar os 'funcionários' com os dados da Autenticaçao
+        //[Required]
+        public string UserName { get; set; }
 
         //********************************************************************************
         // lista das Consultas associadas ao Funcionário

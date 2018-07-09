@@ -8,7 +8,7 @@ using System.Web.Mvc;
 namespace Fisabrantes.Controllers
 {
     public class HomeController : Controller
-{
+    {
         // referencia a BD
         ApplicationDbContext db = new ApplicationDbContext();
         private object listaFuncionarios;
@@ -78,9 +78,10 @@ namespace Fisabrantes.Controllers
         }
         public ActionResult ListaFuncionarios()
         {
-            // pesquisar a lista de administrativos que exixtem na BD
+            // pesquisar a lista de funcionários que exixtem na BD
             var listaDeFuncionarios = db.Funcionarios
-                                    .Where(f => f.CatProfissional.Contains("Funcion"))
+                                    .Where(f => f.Empregado.Contains("Cont"))
+                                    .OrderBy(f => f.CatProfissional)
                                     .OrderBy(f => f.Nome)
                                     .ToList();
 
