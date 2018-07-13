@@ -28,6 +28,12 @@ namespace Fisabrantes.Models
         [ForeignKey("Fisiatra")]
         public int FisiatraFK { get; set; }
         public virtual Funcionarios Fisiatra { get; set; }
+        // sugestao: criar relacionamento N-M (muitas consultas - muitos profissionais)
+        // https://github.com/jcnpereira/bd-muitos-para-muitos  (A-B)
+
+        [ForeignKey("Terapeuta")]
+        public int TerapeutaFK { get; set; }
+        public virtual Funcionarios Terapeuta { get; set; }
 
 
         //Lista de Prescriçoes associadas a esta Consulta

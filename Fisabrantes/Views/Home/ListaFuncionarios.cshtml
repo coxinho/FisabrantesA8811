@@ -9,19 +9,26 @@
 
 <div class="form-horizontal">
 
-    @foreach (var idFuncionario in Model)
+    @foreach (var funcionario in Model)
     {
         <div class="form-group">
-            @Html.LabelFor(model => idFuncionario.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => funcionario.Nome, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DisplayFor(model => idFuncionario.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DisplayFor(model => funcionario.Nome, new { htmlAttributes = new { @class = "form-control" } })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => idFuncionario.DataEntClinica, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => funcionario.CatProfissional, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DisplayFor(model => idFuncionario.DataEntClinica, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.DisplayFor(model => funcionario.CatProfissional, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => funcionario.DataEntClinica, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DisplayFor(model => funcionario.DataEntClinica, new { htmlAttributes = new { @class = "form-control" } })
             </div>
         </div>
 

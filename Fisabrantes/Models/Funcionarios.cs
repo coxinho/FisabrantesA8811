@@ -44,10 +44,10 @@ namespace Fisabrantes.Models
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
         public DateTime DataEntClinica { get; set; }
 
-        [Display(Name = "Contratado")]
-        public string Empregado { get; set; }
+        [Display(Name = "Situação Profissional")]
+        public string SituacaoProfissional { get; set; }
 
-        [Display(Name = "Nº Carteira Profissional")]
+        [Display(Name = "Categoria Profissional")]
         public string CatProfissional { get; set; }
 
         //********************************************************************************     

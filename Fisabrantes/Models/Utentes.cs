@@ -43,6 +43,7 @@ namespace Fisabrantes.Models
         //**************************************************************************
         // Lista das Consultas associadas ao Utente
         public virtual ICollection<Consultas> ListaDeConsultasAoUtente { get; set; }
-        public object ID { get; internal set; }
+
+        //public object ID { get; internal set; }
     }
 }
