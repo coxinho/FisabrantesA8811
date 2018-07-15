@@ -57,11 +57,11 @@ namespace Fisabrantes.Migrations
             // adiciona Consultas
             var Consultas = new List<Consultas> {
                 new Consultas  {idConsulta = 1, DataConsulta =  new DateTime(2017,6,8), UtenteFK = 1, FisiatraFK = 2 },
-                new Consultas  {idConsulta = 2, DataConsulta =  new DateTime(2017,6,18), UtenteFK = 4, FisiatraFK = 1 },
-                new Consultas  {idConsulta = 3, DataConsulta =  new DateTime(2017,6,10), UtenteFK = 2, FisiatraFK = 3 },
-                new Consultas  {idConsulta = 4, DataConsulta =  new DateTime(2017,6,14), UtenteFK = 1, FisiatraFK = 2 },
-                new Consultas  {idConsulta = 5, DataConsulta =  new DateTime(2017,6,20), UtenteFK = 3, FisiatraFK = 3 },
-                new Consultas  {idConsulta = 6, DataConsulta =  new DateTime(2017,6,17), UtenteFK = 5, FisiatraFK = 2 }
+                new Consultas  {idConsulta = 2, DataConsulta =  new DateTime(2017,6,18), UtenteFK = 4, FisiatraFK  = 1 },
+                new Consultas  {idConsulta = 3, DataConsulta =  new DateTime(2017,6,10), UtenteFK = 2, FisiatraFK  = 3 },
+                new Consultas  {idConsulta = 4, DataConsulta =  new DateTime(2017,6,14), UtenteFK = 1, FisiatraFK  = 2 },
+                new Consultas  {idConsulta = 5, DataConsulta =  new DateTime(2017,6,20), UtenteFK = 3, FisiatraFK  = 3 },
+                new Consultas  {idConsulta = 6, DataConsulta =  new DateTime(2017,6,17), UtenteFK = 5, FisiatraFK  = 2 }
             };
 
             Consultas.ForEach(cc => context.Consultas.Add(cc));

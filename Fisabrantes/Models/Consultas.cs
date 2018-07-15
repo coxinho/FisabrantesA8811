@@ -16,24 +16,34 @@ namespace Fisabrantes.Models
         }
 
         [Key]
-        public int idConsulta { get; set; }
+        public int idConsulta { get; set; }   // PK, por exigência da Entity Framework
+
 
         [Column(TypeName = "date")]
         public DateTime DataConsulta { get; set; }
 
+        //***********************************************************************
+        // definição da chave forasteira (FK) que referencia a classe Utentes
+        //***********************************************************************
         [ForeignKey("Utente")]
         public int UtenteFK { get; set; }
         public virtual Utentes Utente { get; set; }
 
+        //***********************************************************************
+        // definição da chave forasteira (FK) que referencia a classe Funcionários
+        //***********************************************************************
         [ForeignKey("Fisiatra")]
         public int FisiatraFK { get; set; }
         public virtual Funcionarios Fisiatra { get; set; }
+
+       // [ForeignKey("Terapeuta")]
+       // public int TerapeutaFK { get; set; }
+       // public virtual Funcionarios Terapeuta { get; set; }
+
+
         // sugestao: criar relacionamento N-M (muitas consultas - muitos profissionais)
         // https://github.com/jcnpereira/bd-muitos-para-muitos  (A-B)
 
-        [ForeignKey("Terapeuta")]
-        public int TerapeutaFK { get; set; }
-        public virtual Funcionarios Terapeuta { get; set; }
 
 
         //Lista de Prescriçoes associadas a esta Consulta

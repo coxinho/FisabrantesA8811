@@ -9,12 +9,20 @@ namespace Fisabrantes.Models
 {
     public class Utentes
     {
-
+        //***********************************************************************
+        // A classe Utentes e a classe Consultas têm um relacionamento 
+        // Muitos-para-Muitos em que só existem atributos nas classes Utentes
+        // e Consultas.
+        //
+        // Nesta circunstância, a forma de exprimir o relacionamento
+        // é criar uma 'lista' de objetos de uma das classes na outra classe,
+        // e vice-versa.
+        // Aqui, NÃO é necessário criar uma classe para exprimir o relacionamento.
+        //***********************************************************************
         public Utentes()
         {
             ListaDeConsultasAoUtente = new HashSet<Consultas>();
         }
-
 
         [Key]
         public int idUtente { get; set; }
@@ -44,6 +52,5 @@ namespace Fisabrantes.Models
         // Lista das Consultas associadas ao Utente
         public virtual ICollection<Consultas> ListaDeConsultasAoUtente { get; set; }
 
-        //public object ID { get; internal set; }
     }
 }
