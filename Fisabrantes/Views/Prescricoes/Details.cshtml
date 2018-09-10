@@ -1,0 +1,35 @@
+﻿@model Fisabrantes.Models.Prescricoes
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Home/About.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Prescricoes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Consulta.idConsulta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Consulta.idConsulta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idPrescricao }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -200,15 +200,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Areas\API\APIAreaRegistration.cs" />
+    <Compile Include="Areas\API\Controllers\UtentesController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ConsultasController.cs" />
     <Compile Include="Controllers\FuncionariosController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PrescricoesController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -242,6 +247,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Areas\API\Views\web.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -298,9 +304,22 @@
     <Content Include="Views\Role\Index.cshtml" />
     <Content Include="Views\Home\Acordos.cshtml" />
     <Content Include="Views\Home\ListaFuncionarios.cshtml" />
+    <Content Include="Views\Prescricoes\Create.cshtml" />
+    <Content Include="Views\Prescricoes\Delete.cshtml" />
+    <Content Include="Views\Prescricoes\Details.cshtml" />
+    <Content Include="Views\Prescricoes\Edit.cshtml" />
+    <Content Include="Views\Prescricoes\Index.cshtml" />
+    <Content Include="Views\Consultas\Create.cshtml" />
+    <Content Include="Views\Consultas\Delete.cshtml" />
+    <Content Include="Views\Consultas\Details.cshtml" />
+    <Content Include="Views\Consultas\Edit.cshtml" />
+    <Content Include="Views\Consultas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="ApiViewModels\" />
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\API\Models\" />
+    <Folder Include="Areas\API\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

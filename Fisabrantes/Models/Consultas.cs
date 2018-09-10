@@ -35,10 +35,12 @@ namespace Fisabrantes.Models
         [ForeignKey("Fisiatra")]
         public int FisiatraFK { get; set; }
         public virtual Funcionarios Fisiatra { get; set; }
+        
 
-       // [ForeignKey("Terapeuta")]
-       // public int TerapeutaFK { get; set; }
-       // public virtual Funcionarios Terapeuta { get; set; }
+        //***********************************************************************
+        // Outros funcionários presentes nas consultas dos utentes
+        //***********************************************************************
+        public virtual Funcionarios Terapeuta { get; set; }
 
 
         // sugestao: criar relacionamento N-M (muitas consultas - muitos profissionais)

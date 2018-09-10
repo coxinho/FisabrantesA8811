@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Fisabrantes.Models.Consultas>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Home/About.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Fisiatra.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Utente.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataConsulta)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Fisiatra.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Utente.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataConsulta)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idConsulta }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idConsulta }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idConsulta })
+        </td>
+    </tr>
+}
+
+</table>
