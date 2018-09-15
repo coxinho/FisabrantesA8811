@@ -200,6 +200,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiViewModels\CreateUtentesViewModel.cs" />
+    <Compile Include="Api\UtentesController.cs" />
     <Compile Include="Areas\API\APIAreaRegistration.cs" />
     <Compile Include="Areas\API\Controllers\UtentesController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -215,6 +217,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PrescricoesController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\UtentesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -316,10 +319,10 @@
     <Content Include="Views\Consultas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ApiViewModels\" />
     <Folder Include="App_Data\" />
     <Folder Include="Areas\API\Models\" />
     <Folder Include="Areas\API\Views\Shared\" />
+    <Folder Include="Views\Utentes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
