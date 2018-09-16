@@ -14,7 +14,7 @@ namespace Fisabrantes.Api
     {
         #region Base de dados
         //Referência para a base de dados
-        private DataBaseFisioDB db = new DataBaseFisioDB();
+        private FisabrantesDB db = new FisabrantesDB();
 
         #endregion
 
@@ -31,7 +31,40 @@ namespace Fisabrantes.Api
         // CRUD: Obter um agente, através do seu ID.
         // - Se o agente não existe -> 404 (Not Found)
         // GET: api/Agentes/5
+        [ResponseType(typeof(Utentes))]
+        public IHttpActionResult GetUtentes(int id)
+        {
+            Agentes agentes = db.Agentes.Find(id);
+            if (agentes == null)
+            {
+                return NotFound;
+            }
+            return Ok(agentes);
+        }
+        [HttpGet, Route("{id}/utentes")]
+        public IHttpActionResult GetConsultasByUtente(int id)
+        {
+            var utente = db.Utentes.Find(id);
+            if (utente == null)
+            {
+                return NotFound;
+            }
+            var resultado = utente.ListaDeConsultas
+                .Select(consulta => new
+                {
+                    consulta.DataDaConsulta,
+                    consulta.ID,
 
+                    Utente = new
+                    {
+                        utente.ID,
+                        utente.Nome,
+                })
+                .ToList();
+
+            return Ok(resultado);
+        }
+        #endregion
 
     }
 }
