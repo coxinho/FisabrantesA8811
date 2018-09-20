@@ -14,7 +14,7 @@ namespace Fisabrantes.Api
     {
         #region Base de dados
         //Referência para a base de dados
-        private FisabrantesDB db = new FisabrantesDB();
+        private Models. FisabrantesDB db = new Models.FisabrantesDB();
 
         #endregion
 

@@ -224,6 +224,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Consultas.cs" />
+    <Compile Include="Models\FisabrantesDB.cs" />
     <Compile Include="Models\Funcionarios.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
