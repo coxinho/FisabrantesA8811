@@ -13,7 +13,9 @@ namespace Fisabrantes
 
             #region Formatação JSON e XML
 
-            config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            config.Formatters.Remove(config.Formatters.XmlFormatter);
+           
+            //config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 
             config.Formatters.JsonFormatter.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented;
 
@@ -29,10 +31,6 @@ namespace Fisabrantes
             #region Routing
 
             // Configuração do Attribute Routing para Web API.
-            config.MapHttpAttributeRoutes();
-
-
-            // Web API routes
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(

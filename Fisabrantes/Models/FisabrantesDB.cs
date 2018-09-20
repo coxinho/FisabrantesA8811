@@ -4,7 +4,7 @@ using System.Data.Entity.ModelConfiguration.Conventions;
 
 namespace Fisabrantes.Models
 {
-    public class FisabrantesDB
+    public class FisabrantesDB : DbContext
     {
         public FisabrantesDB(): base("DataBaseFisio") { }
 
