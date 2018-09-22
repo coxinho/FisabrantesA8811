@@ -45,7 +45,6 @@ namespace Fisabrantes.Controllers
             return View();
         }
 
-
         public ActionResult ListaFuncionarios()
         {
             // pesquisar a lista de funcionários que exixtem na BD
