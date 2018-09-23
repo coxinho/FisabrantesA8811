@@ -58,6 +58,6 @@ namespace Fisabrantes.Models
         //********************************************************************************
         // lista das Consultas associadas ao Funcionário
         public virtual ICollection<Consultas> ListaDeConsultasDoFuncionario { get; set; }
-
+        public IEnumerable<object> ListaDeConsultasAoUtente { get; internal set; }
     }
 }

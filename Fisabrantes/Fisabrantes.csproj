@@ -200,11 +200,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApiViewModels\CreateConsultasViewModel.cs" />
+    <Compile Include="ApiViewModels\CreateFuncionariosViewModel.cs" />
+    <Compile Include="ApiViewModels\CreatePrescricoesViewModel.cs" />
     <Compile Include="ApiViewModels\CreateUtentesViewModel.cs" />
+    <Compile Include="Api\ConsultasController.cs" />
+    <Compile Include="Api\FuncionariosController.cs" />
+    <Compile Include="Api\PrescricoesController.cs" />
     <Compile Include="Api\UtentesController.cs" />
     <Compile Include="Areas\API\APIAreaRegistration.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
@@ -316,13 +321,17 @@
     <Content Include="Views\Consultas\Details.cshtml" />
     <Content Include="Views\Consultas\Edit.cshtml" />
     <Content Include="Views\Consultas\Index.cshtml" />
+    <Content Include="Views\Utentes\Create.cshtml" />
+    <Content Include="Views\Utentes\Delete.cshtml" />
+    <Content Include="Views\Utentes\Details.cshtml" />
+    <Content Include="Views\Utentes\Edit.cshtml" />
+    <Content Include="Views\Utentes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\API\Controllers\" />
     <Folder Include="Areas\API\Models\" />
     <Folder Include="Areas\API\Views\Shared\" />
-    <Folder Include="Views\Utentes\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

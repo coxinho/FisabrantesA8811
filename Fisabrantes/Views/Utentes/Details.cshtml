@@ -1,0 +1,75 @@
+﻿@model Fisabrantes.Models.Utentes
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Home/About.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Utentes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataNasc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataNasc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NIF)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NIF)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Morada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Morada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodPostal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodPostal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SNS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SNS)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idUtente }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

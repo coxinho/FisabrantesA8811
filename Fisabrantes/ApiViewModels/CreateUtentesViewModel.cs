@@ -7,7 +7,6 @@ using System.Web;
 namespace Fisabrantes.ApiViewModels
 {
 
-
     public class CreateUtentesViewModel : IValidatableObject
     {
 
@@ -15,6 +14,7 @@ namespace Fisabrantes.ApiViewModels
         public string Nome { get; set; }
 
         [Required]
+        [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
         public DateTime DataNasc { get; set; }
 
         [Required]

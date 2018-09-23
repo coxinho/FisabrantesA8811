@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Fisabrantes.Models.Utentes>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Home/About.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataNasc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NIF)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Telefone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Morada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CodPostal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SNS)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataNasc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NIF)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Telefone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Morada)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CodPostal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SNS)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idUtente }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idUtente }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idUtente })
+        </td>
+    </tr>
+}
+
+</table>
