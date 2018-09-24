@@ -64,7 +64,7 @@ namespace Fisabrantes.Api
         [HttpGet, Route("api/utentes/{id}/Consultas")]
         public IHttpActionResult GetConsultasByUtente(int id)
         {
-            // Este método "restaura" o link removido no "GetAgentes"
+            // Este método "restaura" o link removido no "GetUtentes"
             // para podermos ter uma lista de consultas de um utente
             // a partir da API.
             var Utente = db.Utente.Find(id);

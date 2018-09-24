@@ -18,6 +18,6 @@ namespace Fisabrantes.Models
         [ForeignKey("Consulta")]
         public int ConsultaFK { get; set; }
         public virtual Consultas Consulta { get; set; }
-
+        public IEnumerable<object> ListaDePrescricoes { get; internal set; }
     }
 }

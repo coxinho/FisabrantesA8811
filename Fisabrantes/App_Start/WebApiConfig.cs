@@ -13,10 +13,12 @@ namespace Fisabrantes
 
             #region Formatação JSON e XML
 
+            // Desligar o formatador do XML.
             config.Formatters.Remove(config.Formatters.XmlFormatter);
-           
-            //config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 
+            //config.Formatters.JsonFormatter.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            
+            // Pretty-print do JSON
             config.Formatters.JsonFormatter.SerializerSettings.Formatting = Newtonsoft.Json.Formatting.Indented;
 
             // Opcional: Converter os nomes de propriedades PascalCase (a la .net)
