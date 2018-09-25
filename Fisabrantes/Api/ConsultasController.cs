@@ -24,12 +24,12 @@ namespace Fisabrantes.Api
         // GET: Api/Consultas
         public IHttpActionResult Get()
         {
-            var resultado = db.Consulta.Select(Consuta => new      // new { } permite definir um objeto anónimo (sem class) em .net.
+            var resultado = db.Consulta.Select(Consulta => new      // new { } permite definir um objeto anónimo (sem class) em .net.
             {
-                //Consulta.idConsulta,        //Id Consulta
-                //Consulta.DataConsulta,      //Data da consulta
-                //Consulta.UtenteFK,
-                //Consulta.FisiatraFK
+                Consulta.idConsulta,        //Id Consulta
+                Consulta.DataConsulta,      //Data da consulta
+                Consulta.UtenteFK,
+                Consulta.FisiatraFK
             })
             .ToList();                  // O ToList() executa a query na base de dados e guarda os resultados numa List<>
             // HTTP 200 OK com o JSON resultante (Array de objetos que representam utentes)
@@ -82,11 +82,11 @@ namespace Fisabrantes.Api
                     Consulta.Fisiatra.idFuncionario,
                     Consulta.Fisiatra.Nome,
                 },
-                Prescricoes = new
+                Prescricoes = Consulta.ListaDePrescricoes.Select(p => new
                 {
-                    //Consulta.Prescricao.idPrescricao,
-                    //Consulta.Prescricao.Descricao,
-                }
+                    p.idPrescricao,
+                    p.Descricao,
+                }).ToList()
             })
             .ToList();
             return Ok(resultado);
@@ -108,7 +108,7 @@ namespace Fisabrantes.Api
                 return BadRequest(ModelState);
             }
             // Para determinar o ID do proximo utente
-            var id = db.Consulta.Select(id => id.idConsulta).Max() + 1;
+            var id = db.Consulta.Select(c => c.idConsulta).Max() + 1;
 
             var Consulta = new Consultas
             {

@@ -110,7 +110,7 @@ namespace Fisabrantes.Api
                 return BadRequest(ModelState);
             }
             // Para determinar o ID da proxima prescricao
-            var id = db.Prescricao.Select(id => id.idPrescricao).Max() + 1;
+            var id = db.Prescricao.Select(p => p.idPrescricao).Max() + 1;
 
             var Prescricao = new Prescricoes
             {

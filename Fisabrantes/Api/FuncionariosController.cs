@@ -54,7 +54,30 @@ namespace Fisabrantes.Api
             {
                 return NotFound();
             }
-            return Ok(funcionarios);
+
+            var resultado = new
+            {
+                funcionarios.idFuncionario,
+                funcionarios.Nome,
+                funcionarios.NIF,
+                // ...,
+                Consultas = funcionarios.ListaDeConsultasDoFuncionario
+                    .Select(cf => new
+                    {
+                        cf.DataConsulta,
+                        cf.FisiatraFK,
+                        // ...,
+                        // Não meter diretamente o objeto do Utente ou Fisiatra
+                        Utente = new
+                        {
+                            cf.Utente.idUtente,
+                            cf.Utente.Nome
+                        }
+                    })
+                    .ToList()
+            };
+
+            return Ok(resultado);
         }
 
         // Uso de Attribute Routing.
@@ -118,7 +141,7 @@ namespace Fisabrantes.Api
                 return BadRequest(ModelState);
             }
             // Para determinar o ID do proximo utente
-            var id = db.Funcionario.Select(id => id.idFuncionario).Max() + 1;
+            var id = db.Funcionario.Select(f => f.idFuncionario).Max() + 1;
 
             var Funcionario = new Funcionarios
             {
@@ -186,7 +209,7 @@ namespace Fisabrantes.Api
             Funcionario.NIF = model.NIF;
             Funcionario.DataEntClinica = model.DataEntClinica;
             Funcionario.CatProfissional = model.CatProfissional;
-            Funcionario.UserName = model.UserName
+            Funcionario.UserName = model.UserName;
 
             db.Entry(Funcionario);
             try

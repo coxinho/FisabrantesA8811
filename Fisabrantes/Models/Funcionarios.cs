@@ -44,9 +44,6 @@ namespace Fisabrantes.Models
         [DisplayFormat(DataFormatString = "{0:yyyy/MM/dd}", ApplyFormatInEditMode = true)]
         public DateTime DataEntClinica { get; set; }
 
-        [Display(Name = "Situação Profissional")]
-        public string SituacaoProfissional { get; set; }
-
         [Display(Name = "Categoria Profissional")]
         public string CatProfissional { get; set; }
 

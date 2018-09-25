@@ -119,7 +119,7 @@ namespace Fisabrantes.Api
                 return BadRequest(ModelState);
             }
             // Para determinar o ID do proximo utente
-            var id = db.Utente.Select(id => id.idUtente).Max() + 1;
+            var id = db.Utente.Select(u => u.idUtente).Max() + 1;
 
             var Utente = new Utentes
             {
