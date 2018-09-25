@@ -59,6 +59,7 @@ namespace Fisabrantes.Api
             {
                 funcionarios.idFuncionario,
                 funcionarios.Nome,
+                funcionarios.DataNasc,
                 funcionarios.NIF,
                 // ...,
                 Consultas = funcionarios.ListaDeConsultasDoFuncionario

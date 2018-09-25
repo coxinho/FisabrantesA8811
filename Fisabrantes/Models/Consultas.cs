@@ -50,6 +50,8 @@ namespace Fisabrantes.Models
 
         //Lista de Prescriçoes associadas a esta Consulta
         public virtual ICollection<Prescricoes> ListaDePrescricoes { get; set; }
+
+        //Lista de Prescriçoes associadas a esta Consulta
         public IEnumerable<object> ListaDeConsultasAoUtente { get; internal set; }
     }
 }

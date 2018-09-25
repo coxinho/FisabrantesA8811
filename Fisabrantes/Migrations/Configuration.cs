@@ -57,9 +57,9 @@ namespace Fisabrantes.Migrations
             var Consultas = new List<Consultas> {
                 new Consultas  {idConsulta = 1, DataConsulta =  new DateTime(2017,6,8), UtenteFK = 1, FisiatraFK = 2 },
                 new Consultas  {idConsulta = 2, DataConsulta =  new DateTime(2017,6,18), UtenteFK = 4, FisiatraFK  = 1 },
-                new Consultas  {idConsulta = 3, DataConsulta =  new DateTime(2017,6,10), UtenteFK = 2, FisiatraFK  = 3 },
+                new Consultas  {idConsulta = 3, DataConsulta =  new DateTime(2017,6,10), UtenteFK = 2, FisiatraFK  = 6 },
                 new Consultas  {idConsulta = 4, DataConsulta =  new DateTime(2017,6,14), UtenteFK = 1, FisiatraFK  = 2 },
-                new Consultas  {idConsulta = 5, DataConsulta =  new DateTime(2017,6,20), UtenteFK = 3, FisiatraFK  = 3 },
+                new Consultas  {idConsulta = 5, DataConsulta =  new DateTime(2017,6,20), UtenteFK = 3, FisiatraFK  = 6 },
                 new Consultas  {idConsulta = 6, DataConsulta =  new DateTime(2017,6,17), UtenteFK = 5, FisiatraFK  = 2 }
             };
 
@@ -70,11 +70,11 @@ namespace Fisabrantes.Migrations
             // adiciona Prescricao
             var Prescricao = new List<Prescricoes> {
                 new Prescricoes  {idPrescricao = 1, Descricao = "Utente Paulo Dias - Fisioterapia Respiratóra", ConsultaFK = 2 },
-                new Prescricoes  {idPrescricao = 2, Descricao = "Eletroterapia - Pretende-se utilizar a eletricidade em tratamentos e estimulação.", ConsultaFK = 2 },
-                new Prescricoes  {idPrescricao = 3, Descricao = "Pretende-se o movimento com os músculos, articulações, ligamentos, tendões e estruturas do sistema nervoso central e periférico.", ConsultaFK = 2 },
+                new Prescricoes  {idPrescricao = 2, Descricao = "Eletroterapia - Pretende-se utilizar a eletricidade em tratamentos e estimulação.", ConsultaFK = 1 },
+                new Prescricoes  {idPrescricao = 3, Descricao = "Pretende-se o movimento com os músculos, articulações, ligamentos, tendões e estruturas do sistema nervoso central e periférico.", ConsultaFK = 3 },
                 new Prescricoes  {idPrescricao = 4, Descricao = "Termoterapia - Deve utilizar-se o calor, ou o frio, como forma de tratar diversas patologias.", ConsultaFK = 2},
-                new Prescricoes  {idPrescricao = 5, Descricao = "Fototerapia - indicado para o utente José.", ConsultaFK = 2 },
-                new Prescricoes  {idPrescricao = 6, Descricao = "Fisioterapia neurofuncional - Tratamento de distúrbios neurológicos que envolvam ou não disfunções motoras.", ConsultaFK = 2 }
+                new Prescricoes  {idPrescricao = 5, Descricao = "Fototerapia - indicado para o utente José.", ConsultaFK = 1 },
+                new Prescricoes  {idPrescricao = 6, Descricao = "Fisioterapia neurofuncional - Tratamento de distúrbios neurológicos que envolvam ou não disfunções motoras.", ConsultaFK = 1 }
             };
 
              Prescricao.ForEach(cc => context.Prescricao.Add(cc));
