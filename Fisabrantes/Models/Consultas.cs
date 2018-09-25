@@ -42,12 +42,6 @@ namespace Fisabrantes.Models
         //***********************************************************************
         public virtual Funcionarios Terapeuta { get; set; }
 
-
-        // sugestao: criar relacionamento N-M (muitas consultas - muitos profissionais)
-        // https://github.com/jcnpereira/bd-muitos-para-muitos  (A-B)
-
-
-
         //Lista de Prescriçoes associadas a esta Consulta
         public virtual ICollection<Prescricoes> ListaDePrescricoes { get; set; }
 
